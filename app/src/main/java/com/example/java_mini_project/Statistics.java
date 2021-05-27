@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,15 +18,18 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iammert.tileprogressview.TiledProgressView;
+
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Statistics extends AppCompatActivity {
     PieChart mPieChart;
-//    ProgBar loader;
+    TiledProgressView tiledProgressView;
     TextView cases, todayCases, deaths, todayDeaths, recovered, todayRecovered, Active, critical, affectedCountries, tests, cases_w,
             todayCases_w, deaths_w, todayDeaths_w, recovered_w, todayRecovered_w, Active_w, critical_w, affectedCountries_w, tests_w;
     LinearLayout mainlayout;
@@ -36,7 +40,11 @@ public class Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
-//        loader = findViewById(R.id.myProgBar);
+        tiledProgressView = findViewById(R.id.loadingView);
+        tiledProgressView.setProgress(100f);//Percentage
+        tiledProgressView.setColorRes(R.color.white);
+        tiledProgressView.setLoadingColorRes(R.color.purple);
+
         back_btn = findViewById(R.id.back_btn_id);
         mainlayout = findViewById(R.id.main_linear_layout_id);
         mPieChart = findViewById(R.id.piechart);
@@ -76,7 +84,7 @@ public class Statistics extends AppCompatActivity {
     private void fetchData() {
 
         String url = "https://disease.sh/v3/covid-19/all/";
-//        loader.startLayoutAnimation();
+        tiledProgressView.setActivated(true);
         StringRequest requestdata = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -115,23 +123,23 @@ public class Statistics extends AppCompatActivity {
                     affectedCountries_w.setText(Converter.format(Long.parseLong(affectedCountries.getText().toString())));
                     tests_w.setText(Converter.format(Long.parseLong(tests.getText().toString())));
 
-                    // Stopping  the loading progressbar
-//                    archloader.stop();
-//                    archloader.setVisibility(View.GONE);
+//                     Stopping  the loading progressbar
+                    tiledProgressView.setActivated(false);
+                    tiledProgressView.setVisibility(View.GONE);
                     mainlayout.setVisibility(View.VISIBLE);
 
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-//                    loader.clearAnimation();
-//                    loader.setVisibility(View.GONE);
+                    tiledProgressView.setActivated(false);
+                    tiledProgressView.setVisibility(View.GONE);
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-//                loader
-//                loader.setVisibility(View.GONE);
+                tiledProgressView.setActivated(false);
+                tiledProgressView.setVisibility(View.GONE);
                 Toast.makeText(Statistics.this, "Please switch on your Wifi or Mobile Data and try again later", Toast.LENGTH_SHORT).show();
             }
         });
