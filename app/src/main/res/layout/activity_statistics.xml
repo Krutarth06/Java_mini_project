@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="#ffffff"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TotalCases_Textview_id"
+                            android:id="@+id/TotalCases_words_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -225,7 +225,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TotalCases_words_Textview_id"
+                            android:id="@+id/TotalCases_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -253,7 +253,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/death_Textview_id"
+                            android:id="@+id/death_words_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -263,7 +263,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/death_words_Textview_id"
+                            android:id="@+id/death_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -291,7 +291,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/recovered_Textview_id"
+                            android:id="@+id/recovered_words_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -301,7 +301,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/recovered_words_Textview_id"
+                            android:id="@+id/recovered_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -329,7 +329,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/active_Textview_id"
+                            android:id="@+id/active_words_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -339,7 +339,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/active_words_Textview_id"
+                            android:id="@+id/active_Textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -368,7 +368,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/critical_textview_id"
+                            android:id="@+id/critical_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -378,7 +378,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/critical_words_textview_id"
+                            android:id="@+id/critical_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -406,7 +406,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/tests_textview_id"
+                            android:id="@+id/tests_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -416,7 +416,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/tests_words_textview_id"
+                            android:id="@+id/tests_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -445,7 +445,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/AffectedCountries_textview_id"
+                            android:id="@+id/AffectedCountries_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -455,7 +455,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/AffectedCountries_words_textview_id"
+                            android:id="@+id/AffectedCountries_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -495,7 +495,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TodayCases_textview_id"
+                            android:id="@+id/TodayCases_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -505,7 +505,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TodayCases_words_textview_id"
+                            android:id="@+id/TodayCases_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -533,7 +533,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/todayDeaths_textview_id"
+                            android:id="@+id/todayDeaths_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -543,7 +543,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/todayDeaths_words_textview_id"
+                            android:id="@+id/todayDeaths_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
@@ -571,7 +571,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TodayRecovered_textview_id"
+                            android:id="@+id/TodayRecovered_words_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
@@ -581,7 +581,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TodayRecovered_words_textview_id"
+                            android:id="@+id/TodayRecovered_textview_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Zero"
